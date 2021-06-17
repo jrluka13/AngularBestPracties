@@ -16,5 +16,5 @@ import { UsersPageModule } from './pages/users/users-page.module';
   providers: [],
 })
 
-export class AdminLayoutModule {
+export class AdminModule {
 }
