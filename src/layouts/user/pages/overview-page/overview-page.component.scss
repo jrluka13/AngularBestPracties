@@ -1,0 +1,7 @@
+@import "src/styles/theme";
+
+
+.container{
+  height: 100%;
+  @extend %d-flex-center;
+}
