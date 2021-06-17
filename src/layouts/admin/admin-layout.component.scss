@@ -1,5 +1,4 @@
 @import "src/styles/theme";
-
 .grid-container {
   height: 100%;
   display: grid;
@@ -7,8 +6,8 @@
   grid-template-rows: px2em(60) auto px2em(40);
   background-color: $layout-background-color;
 
-  shared-header {
-    background-color: $user-header-background-color;
+  shared-header{
+    background-color: $admin-header-background-color;
   }
 
   footer {

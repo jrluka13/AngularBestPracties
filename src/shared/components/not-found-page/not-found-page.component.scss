@@ -1,0 +1,26 @@
+@import "src/styles/theme";
+
+.container-error {
+  height: 100%;
+  @extend %d-flex-column-center;
+  .block_error{
+    padding: px2em(30);
+    @extend %d-flex-column-center;
+    height: 20%;
+    border: px2em(1) solid black;
+  }
+  h1 {
+    font: {
+      size: px2em(110);
+    }
+    margin-bottom: px2em(6);
+  }
+
+  h2 {
+    font: {
+      size: px2em(30);
+    }
+  }
+
+
+}
