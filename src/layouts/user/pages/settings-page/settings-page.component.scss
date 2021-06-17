@@ -9,7 +9,7 @@
     grid-template-rows: px2em(60) auto;
 
     .title {
-      @extend %d-flex-start;
+      @extend %d-flex-between;
       height: 100%;
       font: {
         family: $base-regular-font;
@@ -19,6 +19,10 @@
 
       span {
         margin-left: $lg-screen-gutter;
+      }
+
+      button {
+        margin-right: $lg-screen-gutter;
       }
     }
 

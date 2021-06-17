@@ -5,7 +5,7 @@
   background-color: $header-background-color;
   @extend %d-flex-between;
 
-  .title  {
+  .title {
     font: {
       family: $base-regular-font;
       size: px2em(20);
