@@ -7,6 +7,7 @@ import { UserModule } from 'src/layouts/user/user.module';
 
 import { AppComponent } from 'src/app/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminLayoutModule } from '../layouts/admin/admin-layout.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AuthModule,
     UserModule,
+    AdminLayoutModule,
     BrowserAnimationsModule,
   ],
   bootstrap: [AppComponent]
