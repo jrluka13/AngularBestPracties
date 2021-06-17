@@ -1,0 +1,17 @@
+@import "src/styles/theme";
+  .grid-container {
+    height: 100%;
+    display: grid;
+    grid-gap: px2em(10);
+    grid-template-rows: px2em(60) auto px2em(40);
+    background-color: $layout-background-color;
+
+    footer {
+      @extend %d-flex-start;
+      background-color: $footer-background-color;
+
+      span {
+        margin-left: $lg-screen-gutter;
+      }
+    }
+  }

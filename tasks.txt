@@ -1,0 +1,7 @@
+1 - создаем страницу overview
+2 - подключить к роутинг (user/overview)
+2.1 - shared module
+2.2 - кнопочка редиректит на user/settings
+3 - на сетитнгах обратный редирект
+4 - переход на layout редирект на overview
+features/user-layout

@@ -1,0 +1,34 @@
+@import "src/styles/theme";
+
+.wrapper {
+  height: 100%;
+  background-color: $header-background-color;
+  @extend %d-flex-between;
+
+  .title  {
+    font: {
+      family: $base-regular-font;
+      size: px2em(20);
+    };
+  }
+
+  .left-block {
+    @extend %d-flex-between;
+    margin-left: $lg-screen-gutter;
+
+    svg-icon {
+      margin-right: px2em(10);
+    }
+  }
+
+  .right-block {
+    @extend %d-flex-between;
+    width: auto;
+    margin-right: $lg-screen-gutter;
+
+    svg-icon {
+      margin-right: px2em(20);
+    }
+
+  }
+}

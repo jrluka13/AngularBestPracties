@@ -1,0 +1,42 @@
+@import "src/styles/theme";
+
+.wrapper {
+  height: 100%;
+  background-color: $setting-background-color;
+
+  .page {
+    @extend %d-grid;
+    grid-template-rows: px2em(60) auto;
+
+    .title {
+      @extend %d-flex-start;
+      height: 100%;
+      font: {
+        family: $base-regular-font;
+        size: px2em(20);
+        weight: 300;
+      }
+
+      span {
+        margin-left: $lg-screen-gutter;
+      }
+    }
+
+    .main {
+      @extend %d-grid;
+      grid-template-columns: 7fr 5fr;
+      grid-column-gap: $lg-screen-gutter;
+
+      .left-block {
+        @extend %d-flex-center;
+        background-color: #eee; //todo: REMOVE TEMPORARY!!!
+      }
+
+      .right-block {
+        @extend %d-flex-center;
+        background-color: #eee; //todo: REMOVE TEMPORARY!!!
+      }
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+@import "src/styles/theme";
+
+.login-form-wrapper {
+  background-color: $auth-form-background;
+  border-radius: px2em(10);
+  @extend %shadow-material;
+
+  h3 {
+    padding: px2em(20);
+  }
+
+  form {
+    @extend %d-flex-column-between;
+    padding: 0 px2em(40);
+
+    .inputs-wrapper {
+      @extend %d-flex-column-between;
+      min-height: px2em(150);
+
+      mat-form-field {
+        min-width: px2em(300);
+
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+
+    button {
+      margin: px2em(30) 0;
+    }
+  }
+
+  .register-link-block {
+    @extend %d-flex-column-center;
+    padding-bottom: px2em(10);
+    font: {
+      size: px2em(16);
+    };
+
+    span {
+      padding: px2em(10);
+      color: $base-link-color;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: darken($base-link-color, 20%);
+
+      }
+    }
+  }
+}
+
