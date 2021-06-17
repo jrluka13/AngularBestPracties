@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { AdminLayoutComponent } from './admin-layout.component';
-import { RolesComponent } from './pages/roles/roles.component';
-import { UsersComponent } from './pages/users/users.component';
+import { AdminRoutingModule } from './admin-routing.module';
+import { CommonModule } from '@angular/common';
+import { RolesPageModule } from './pages/roles/roles-page.module';
+import { UsersPageModule } from './pages/users/users-page.module';
 
 @NgModule({
-  declarations: [AdminLayoutComponent, RolesComponent, UsersComponent],
-  imports: [],
+  declarations: [AdminLayoutComponent],
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    RolesPageModule,
+    UsersPageModule,
+  ],
   providers: [],
 })
 
