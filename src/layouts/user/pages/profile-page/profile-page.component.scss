@@ -1,0 +1,45 @@
+@import "src/styles/theme";
+
+.wrapper {
+  height: 100%;
+  background-color: $setting-background-color;
+
+  .page {
+    @extend %d-grid;
+    grid-template-rows: px2em(60) auto;
+
+    .title {
+      @extend %d-flex-start;
+      height: 100%;
+      margin-left: $sm-screen-gutter;
+      font: {
+        family: $base-regular-font;
+        size: px2em(28);
+        weight: 300;
+      }
+
+      span {
+        margin-left: px2em(5);
+      }
+    }
+
+    .main {
+      @extend %d-grid;
+      grid-template-columns: 3fr 7fr 3fr;
+      grid-column-gap: $lg-screen-gutter;
+
+      .center-block {
+        @extend %d-grid;
+        grid-template-rows: px2em(250) auto;
+
+        .center-block_row {
+        }
+
+        .center-block_columns {
+          @extend %d-grid;
+          grid-template-columns: 5fr 7fr;
+        }
+      }
+    }
+  }
+}

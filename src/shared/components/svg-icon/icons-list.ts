@@ -5,4 +5,5 @@ export enum ICONS {
   CURSOR = 'cursor',
   BELL = 'bell',
   LIST = 'list',
+  HOME = 'home',
 }

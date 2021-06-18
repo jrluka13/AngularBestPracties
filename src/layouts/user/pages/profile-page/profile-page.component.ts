@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ICONS } from '../../../../shared/components/svg-icon/icons-list';
 
 
 @Component({
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 })
 
 export class ProfilePageComponent {
+  private _home = ICONS.HOME;
+
   constructor() {
+  }
+
+  get homeIcon(): ICONS {
+    return this._home;
   }
 }
