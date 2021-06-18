@@ -3,6 +3,18 @@
     <svg-icon [name]="logoIcon" width="40" height="40"></svg-icon>
     <span class="title">{{title}}</span>
   </div>
+  <nav class="nav">
+    <ul *ngIf="typeUser == 'user'">
+      <li *ngFor="let link of linksUser">
+        <a [routerLink]=link.link>{{link.linkName}}</a>
+      </li>
+    </ul>
+    <ul *ngIf="typeUser == 'admin'">
+      <li *ngFor="let link of linksAdmin">
+        <a [routerLink]=link.link>{{link.linkName}}</a>
+      </li>
+    </ul>
+  </nav>
   <div class="right-block">
     <svg-icon width="20" height="20" *ngFor="let icon of rightIcons; trackBy:iconByName" [name]=icon></svg-icon>
   </div>

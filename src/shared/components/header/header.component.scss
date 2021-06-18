@@ -11,6 +11,22 @@
     };
   }
 
+  .nav {
+    ul {
+      @extend %d-flex-between;
+
+      li {
+        margin-left: px2em(50);
+        list-style-type: none;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+  }
+
   .left-block {
     @extend %d-flex-between;
     margin-left: $lg-screen-gutter;

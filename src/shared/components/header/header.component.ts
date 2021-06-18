@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
+import { Router } from '@angular/router';
+import { LinksList } from './links-list';
 
 @Component({
   selector: 'shared-header',
@@ -7,6 +9,7 @@ import { ICONS } from 'src/shared/components/svg-icon/icons-list';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  private _typeUser: string;
   private _title: string;
   private _logo = ICONS.ANGULAR;
   private _rightIcons = [
@@ -15,8 +18,37 @@ export class HeaderComponent implements OnInit {
     ICONS.BELL,
     ICONS.LIST,
   ];
+  private _linksUser = [
+    {
+      linkName: 'Overview',
+      link: 'overview',
+    },
+    {
+      linkName: 'Settings',
+      link: 'settings',
+    },
+    {
+      linkName: 'Profile',
+      link: 'profile',
+    }
+  ];
 
-  constructor() {
+  private _linksAdmin = [
+    {
+      linkName: 'Roles',
+      link: 'roles',
+    },
+    {
+      linkName: 'Users',
+      link: 'users',
+    },
+  ];
+
+  constructor(private router: Router) {
+  }
+
+  get typeUser(): string {
+    return this._typeUser;
   }
 
   get logoIcon(): ICONS {
@@ -25,6 +57,14 @@ export class HeaderComponent implements OnInit {
 
   get rightIcons(): ICONS[] {
     return this._rightIcons;
+  }
+
+  get linksUser(): LinksList[] {
+    return this._linksUser;
+  }
+
+  get linksAdmin(): LinksList[] {
+    return this._linksAdmin;
   }
 
   @Input()
@@ -37,6 +77,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._typeUser = this.router.url.split('/')[1];
   }
 
   iconByName(index: number, name: ICONS): ICONS {

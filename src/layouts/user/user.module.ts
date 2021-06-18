@@ -5,6 +5,7 @@ import { UserRoutingModule } from 'src/layouts/user/user-routing.module';
 import { UserLayoutComponent } from 'src/layouts/user/user-layout.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { OverviewPageModule } from './pages/overview-page/overview-page.module';
+import { ProfilePageModule } from './pages/profile-page/profile-page.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { OverviewPageModule } from './pages/overview-page/overview-page.module';
     CommonModule,
     SettingsPageModule,
     OverviewPageModule,
+    ProfilePageModule,
     SharedModule
   ],
 })

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SettingsPageComponent } from 'src/layouts/user/pages/settings-page/settings-page.component';
 import { UserLayoutComponent } from 'src/layouts/user/user-layout.component';
 import { OverviewPageComponent } from './pages/overview-page/overview-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
         path: 'overview',
         component: OverviewPageComponent,
       },
+      {
+        path: 'profile',
+        component: ProfilePageComponent,
+      }
     ],
   }
 ];

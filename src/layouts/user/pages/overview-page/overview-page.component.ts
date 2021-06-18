@@ -15,6 +15,6 @@ export class OverviewPageComponent implements OnInit {
   }
 
   redirectToSetting(): void {
-    this.router.navigate(['./settings']);
+    this.router.navigate(['user/settings']);
   }
 }
