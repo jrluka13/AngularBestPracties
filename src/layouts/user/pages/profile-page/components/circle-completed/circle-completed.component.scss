@@ -1,0 +1,27 @@
+@import "src/styles/theme";
+
+.wrapper {
+  width: 100%;
+  margin-top: px2em(40);
+  @extend %d-flex-column-center;
+
+  .container {
+    @extend %d-flex-column-center;
+    width: 120px;
+    height: 120px;
+    border: px2em(5) solid #e0e0e0;
+    border-radius: 50%;
+
+    .text{
+      h1 {
+        font: {
+          weight: bold;
+        }
+      }
+    }
+
+
+
+  }
+
+}

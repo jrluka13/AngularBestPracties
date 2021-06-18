@@ -6,4 +6,12 @@ export enum ICONS {
   BELL = 'bell',
   LIST = 'list',
   HOME = 'home',
+  USER = 'user',
+  BANK = 'bank',
+  BROADCAST = 'broadcast',
+  ANALYTICS = 'analytics',
+  BICYCLE = 'bicycle',
+  BOOK = 'book',
+  STAR = 'star',
+  EGG = 'egg'
 }

@@ -1,3 +1,4 @@
+@import 'src/styles/functions';
 //Flexbox
 %d-flex-align-center {
   display: flex;
@@ -27,6 +28,12 @@
 %d-flex-column-center {
   @extend %d-flex-center;
   flex-direction: column;
+}
+
+//Heading
+%h3 {
+  margin-left: px2em(50);
+  margin-top: 20px;
 }
 
 //Grids

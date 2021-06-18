@@ -1,0 +1,21 @@
+@import 'src/styles/theme';
+
+.wrapper {
+  width: 350px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: $user-layout-background;
+  margin-bottom: px2em(30);
+  margin-left: px2em(20);
+
+  .container {
+    @extend %d-grid;
+    grid-template-columns: 5fr 7fr;
+
+    .right-block{
+      margin-left: px2em(20);
+      margin-top: px2em(30);
+    }
+
+  }
+}
