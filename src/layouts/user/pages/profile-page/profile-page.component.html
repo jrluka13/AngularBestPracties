@@ -2,17 +2,32 @@
   <div class="page">
     <div class="title">
       <svg-icon width="18" height="18" [name]="homeIcon"></svg-icon>
-      <span>Profile</span>
+      <span>{{title}}</span>
     </div>
     <div class="main">
-      <div class="left-block"></div>
+      <div class="left-block">
+        <circle-profile></circle-profile>
+        <circle-completed></circle-completed>
+      </div>
       <div class="center-block">
         <div class="center-block_row">
-
+          <div class="center-block-title">
+            <h3>Skills Acquired (18)</h3>
+            <span>View all</span>
+          </div>
+          <div class="cards-block">
+            <card-skills *ngFor="let card of cards" [card]="card"></card-skills>
+          </div>
         </div>
         <div class="center-block_columns">
-          <div class="center-block_left"></div>
-          <div class="center-block_right"></div>
+          <div class="center-block_left">
+            <span>Roles eligible</span>
+            <roles-eligible></roles-eligible>
+          </div>
+          <div class="center-block_right">
+            <span>Roles eligible</span>
+            <leader-board *ngFor="let li of lists;let i = index" [li]="li" [ind]="i+1"></leader-board>
+          </div>
         </div>
       </div>
       <div class="right-block"></div>

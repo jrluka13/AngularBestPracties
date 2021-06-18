@@ -2,7 +2,7 @@
 
 .wrapper {
   height: 100%;
-  background-color: $setting-background-color;
+  background-color: #f5f5f5;
 
   .page {
     @extend %d-grid;
@@ -11,7 +11,7 @@
     .title {
       @extend %d-flex-start;
       height: 100%;
-      margin-left: $sm-screen-gutter;
+      margin-left: 4.5%;
       font: {
         family: $base-regular-font;
         size: px2em(28);
@@ -25,19 +25,49 @@
 
     .main {
       @extend %d-grid;
-      grid-template-columns: 3fr 7fr 3fr;
+      grid-template-columns: 2fr 8fr 3fr;
       grid-column-gap: $lg-screen-gutter;
+
+      .left-block {
+
+      }
 
       .center-block {
         @extend %d-grid;
         grid-template-rows: px2em(250) auto;
 
+        .center-block-title {
+          padding-left: px2em(30);
+          @extend %d-flex-between;
+
+          span {
+            color: #2979ff;
+            cursor: pointer;
+            margin-right: px2em(25);
+          }
+        }
+
         .center-block_row {
+          overflow: scroll;
+
+          .cards-block {
+            display: flex;
+            flex-wrap: wrap;
+          }
         }
 
         .center-block_columns {
           @extend %d-grid;
           grid-template-columns: 5fr 7fr;
+
+          .center-block_left {
+            padding: px2em(30);
+
+          }
+          .center-block_right {
+            padding: px2em(30);
+
+          }
         }
       }
     }

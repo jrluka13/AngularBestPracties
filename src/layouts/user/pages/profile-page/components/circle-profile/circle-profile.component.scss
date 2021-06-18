@@ -1,0 +1,20 @@
+@import "src/styles/theme";
+
+.wrapper {
+  width: 100%;
+  @extend %d-flex-center;
+
+  .container {
+    @extend %d-flex-column-center;
+
+    .circle{
+      @extend %d-flex-center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+    }
+
+  }
+
+}

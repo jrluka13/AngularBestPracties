@@ -1,0 +1,28 @@
+@import 'src/styles/theme';
+
+.wrapper {
+  width: 80%;
+  height: 10%;
+  background-color: #ffffff;
+  margin-top: px2em(10);
+  border-radius: 5px;
+
+  .container {
+      @extend %d-grid;
+      grid-template-columns: 1fr 5fr;
+    .left-block{
+      @extend %d-flex-center;
+      .circle{
+        @extend %d-flex-center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fdecf5;
+      }
+    }
+    .right-block{
+      @extend %d-flex-align-center
+    }
+  }
+}
+
