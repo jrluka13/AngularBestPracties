@@ -30,6 +30,11 @@
   flex-direction: column;
 }
 
+%d-flex-line-center{
+  display: flex;
+  justify-content: center;
+}
+
 //Heading
 %h3 {
   margin-left: px2em(50);
