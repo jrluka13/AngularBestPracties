@@ -9,6 +9,8 @@ import { CardSkillsService } from './services/card-skills.service';
 import { RolesEligibleComponent } from './components/roles-eligible/roles-eligible.component';
 import { LeaderBoardComponent } from './components/leader-board/leader-board.component';
 import { LeaderBoardService } from './services/leader-board.service';
+import { BadgesComponent } from './components/badges/badges.component';
+import { BadgesService } from './services/badges.service';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,14 @@ import { LeaderBoardService } from './services/leader-board.service';
     CircleCompletedComponent,
     CardSkillsComponent,
     RolesEligibleComponent,
-    LeaderBoardComponent
+    LeaderBoardComponent,
+    BadgesComponent
   ],
   exports: [ProfilePageComponent],
   imports: [
     CommonModule, SharedModule
   ],
-  providers: [CardSkillsService, LeaderBoardService]
+  providers: [CardSkillsService, LeaderBoardService, BadgesService]
 })
 
 export class ProfilePageModule {

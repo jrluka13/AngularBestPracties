@@ -1,0 +1,26 @@
+@import "src/styles/theme";
+
+.wrapper {
+  width: 100%;
+  margin-top: px2em(20);
+  @extend %d-flex-line-center;
+
+  .container {
+    @extend %d-flex-column-center;
+
+    .circle {
+      @extend %d-flex-center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(#e66465, #9198e5);
+    }
+
+    span {
+      margin-top: px2em(10);
+    }
+
+
+  }
+
+}

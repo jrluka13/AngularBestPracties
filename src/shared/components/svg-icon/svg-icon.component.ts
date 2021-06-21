@@ -10,6 +10,8 @@ export class SvgIconComponent implements OnInit {
   private _name: ICONS;
   private _width = '16';
   private _height = '16';
+  private _fill = 'fill:#black';
+
 
   constructor() {
   }
@@ -41,6 +43,14 @@ export class SvgIconComponent implements OnInit {
     return this._height;
   }
 
+  @Input()
+  set fill(value: string) {
+    this._fill = value;
+  }
+
+  get fill(): string {
+    return this._fill;
+  }
   ngOnInit(): void {
   }
 
