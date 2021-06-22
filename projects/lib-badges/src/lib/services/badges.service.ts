@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ICONS } from 'projects/lib-badges/src/lib/shared/svg-icon/icons-list';
+import { ICONS } from '../shared/svg-icon/icons-list';
 
 export interface Badge {
   name: string;

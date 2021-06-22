@@ -1,2 +1,2 @@
-export * from 'projects/lib-badges/src/lib/lib-badges.component';
-export * from 'projects/lib-badges/src/lib/lib-badges.module';
+export * from './lib/lib-badges.component';
+export * from './lib/lib-badges.module';

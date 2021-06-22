@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICONS } from 'projects/lib-badges/src/lib/shared/svg-icon/icons-list';
+import { ICONS } from './icons-list';
 
 @Component({
   selector: 'mylib-svg-icon',

@@ -1,2 +1,2 @@
-export * from 'projects/lib-badges/src/index';
+export * from './index';
 
