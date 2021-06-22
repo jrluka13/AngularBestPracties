@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LibBadgesComponent } from './lib-badges.component';
+
 
 describe('LibBadgesComponent', () => {
   let component: LibBadgesComponent;

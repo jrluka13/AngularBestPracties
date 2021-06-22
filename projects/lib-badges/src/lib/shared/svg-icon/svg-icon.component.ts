@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ICONS } from './icons-list';
 
+
 @Component({
   selector: 'mylib-svg-icon',
   templateUrl: './svg-icon.component.html',
