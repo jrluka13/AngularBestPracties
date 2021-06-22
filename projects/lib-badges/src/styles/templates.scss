@@ -1,0 +1,53 @@
+@import 'functions';
+//Flexbox
+%d-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+%d-flex-start {
+  @extend %d-flex-align-center;
+  justify-content: flex-start;
+}
+
+%d-flex-center {
+  @extend %d-flex-align-center;
+  justify-content: center;
+}
+
+%d-flex-between {
+  @extend %d-flex-align-center;
+  justify-content: space-between;
+}
+
+%d-flex-column-between {
+  @extend %d-flex-between;
+  flex-direction: column;
+}
+
+%d-flex-column-center {
+  @extend %d-flex-center;
+  flex-direction: column;
+}
+
+%d-flex-line-center {
+  display: flex;
+  justify-content: center;
+}
+
+//Heading
+%h3 {
+  margin-left: px2em(50);
+  margin-top: 20px;
+}
+
+//Grids
+%d-grid {
+  height: 100%;
+  display: grid;
+}
+
+//Shadows
+%shadow-material {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+}

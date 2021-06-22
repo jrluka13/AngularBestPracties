@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "libBadges",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "lib-badges",
+      "kebab-case"
+    ]
+  }
+}

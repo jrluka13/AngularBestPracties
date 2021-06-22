@@ -1,15 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { Badge } from '../../services/badges.service';
+import { Badge } from '../services/badges.service';
 
 @Component({
-  selector: 'app-badges',
+  selector: 'lib-badges-badges',
   templateUrl: './badges.component.html',
   styleUrls: ['./badges.component.scss']
 })
 
 export class BadgesComponent {
   private _badge;
-
   constructor() {
   }
 
