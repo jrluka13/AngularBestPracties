@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ICONS } from '../../../../../../shared/components/svg-icon/icons-list';
-import { Card } from '../../services/card-skills.service';
+import { ICONS } from 'src/shared/components/svg-icon/icons-list';
+import { Card } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
 
 @Component({
   selector: 'card-skills',

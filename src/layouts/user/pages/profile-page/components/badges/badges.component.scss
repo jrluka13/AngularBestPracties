@@ -1,6 +1,7 @@
 @import "src/styles/theme";
 
-.wrapper {
+
+:host {
   width: 100%;
   margin-top: px2em(20);
   @extend %d-flex-line-center;
@@ -22,5 +23,7 @@
 
 
   }
-
 }
+
+
+

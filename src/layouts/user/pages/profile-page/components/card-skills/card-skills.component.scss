@@ -1,8 +1,8 @@
 @import 'src/styles/theme';
 
 .wrapper {
-  width: 390px;
-  height: 150px;
+  width: px2em(445);
+  height: px2em(175);
   border-radius: 5px;
   background-color: $user-layout-background;
   margin-bottom: px2em(30);

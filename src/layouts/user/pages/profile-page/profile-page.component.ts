@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ICONS } from '../../../../shared/components/svg-icon/icons-list';
-import { CardSkillsService } from './services/card-skills.service';
-import { LeaderBoardService } from './services/leader-board.service';
-import { BadgesService } from './services/badges.service';
+import { ICONS } from 'src/shared/components/svg-icon/icons-list';
+import { CardSkillsService } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
+import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services/leader-board.service';
+import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
 
 
 @Component({

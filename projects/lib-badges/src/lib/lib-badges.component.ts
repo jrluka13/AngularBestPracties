@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { BadgesService } from './services/badges.service';
+import { Component } from '@angular/core';
+import { BadgesService } from 'projects/lib-badges/src/lib/services/badges.service';
+import { Badge } from 'projects/lib-badges/src/lib/services/badges.service';
 
 @Component({
-  selector: 'lib-badges-lib-badges',
+  selector: 'mylib-lib-badges',
   template: `
-    <lib-badges-badges *ngFor="let badge of badges" [badge]="badge"></lib-badges-badges>
+    <mylib-badges *ngFor="let badge of badges" [badge]="badge"></mylib-badges>
   `,
   styles: []
 })
-export class LibBadgesComponent implements OnInit {
-  public badges = this.badgesService.getBadges();
+export class LibBadgesComponent {
+  private _badges = this.badgesService.getBadges();
+
   constructor(private badgesService: BadgesService) {
   }
 
-  ngOnInit(): void {
+  get badges(): Badge[] {
+    return this._badges;
   }
 
 }

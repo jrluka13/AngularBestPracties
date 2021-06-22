@@ -12,7 +12,7 @@
       <div class="center-block">
         <div class="center-block_row">
           <div class="center-block-title">
-            <h3>Skills Acquired (18)</h3>
+            <h3>Skills Acquired ({{cards.length}})</h3>
             <span>View all</span>
           </div>
           <div class="cards-block">
@@ -31,8 +31,7 @@
         </div>
       </div>
       <div class="right-block">
-        <span>Badges (10)</span>
-<!--        <lib-badges-lib-badges></lib-badges-lib-badges>-->
+        <span>Badges ({{badges.length}})</span>
         <app-badges *ngFor="let badge of badges" [badge]="badge"></app-badges>
       </div>
     </div>

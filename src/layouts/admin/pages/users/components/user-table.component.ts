@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MockDataTableService } from '../services/mock-data-table.service';
+import { MockDataTableService } from 'src/layouts/admin/pages/users/services/mock-data-table.service';
 
 @Component({
   selector: 'user-table',

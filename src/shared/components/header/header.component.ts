@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { Router } from '@angular/router';
-import { LinksList } from './links-list';
+import { LinksList } from 'src/shared/components/header/links-list';
 
 @Component({
   selector: 'shared-header',
