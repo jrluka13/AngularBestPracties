@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { UserLayoutComponent } from './user-layout.component';
+import { UserLayoutComponent } from 'src/layouts/user/user-layout.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

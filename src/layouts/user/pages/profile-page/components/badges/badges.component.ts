@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Badge } from '../../services/badges.service';
+import { Badge } from 'src/layouts/user/pages/profile-page/services/badges.service';
 
 @Component({
   selector: 'app-badges',

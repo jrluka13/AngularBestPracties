@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "libBadges",
+      "mylib",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "lib-badges",
+      "mylib",
       "kebab-case"
     ]
   }

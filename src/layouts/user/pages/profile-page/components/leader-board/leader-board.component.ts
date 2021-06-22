@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ICONS } from '../../../../../../shared/components/svg-icon/icons-list';
-import { Board } from '../../services/leader-board.service';
+import { ICONS } from 'src/shared/components/svg-icon/icons-list';
+import { Board } from 'src/layouts/user/pages/profile-page/services/leader-board.service';
 
 @Component({
   selector: 'leader-board',

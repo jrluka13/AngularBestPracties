@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SettingsPageComponent } from 'src/layouts/user/pages/settings-page/settings-page.component';
 import { UserLayoutComponent } from 'src/layouts/user/user-layout.component';
-import { OverviewPageComponent } from './pages/overview-page/overview-page.component';
-import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { ProfilePageComponent } from 'src/layouts/user/pages/profile-page/profile-page.component';
 
 const routes: Routes = [
   {
@@ -17,16 +15,17 @@ const routes: Routes = [
       },
       {
         path: 'settings',
-        component: SettingsPageComponent,
-      },
-      {
-        path: 'overview',
-        component: OverviewPageComponent,
+        loadChildren: () => import('src/layouts/user/pages/settings-page/settings-page.module').then(m => m.SettingsPageModule)
       },
       {
         path: 'profile',
-        component: ProfilePageComponent,
-      }
+        component: ProfilePageComponent
+        // loadChildren: () => import('src/layouts/user/pages/profile-page/profile-page.module').then(m => m.ProfilePageModule)
+      },
+      {
+        path: 'overview',
+        loadChildren: () => import('src/layouts/user/pages/overview-page/overview-page.module').then(m => m.OverviewPageModule)
+      },
     ],
   }
 ];

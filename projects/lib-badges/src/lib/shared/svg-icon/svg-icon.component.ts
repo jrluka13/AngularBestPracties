@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICONS } from './icons-list';
+import { ICONS } from 'projects/lib-badges/src/lib/shared/svg-icon/icons-list';
 
 @Component({
-  selector: 'lib-badges-svg-icon',
+  selector: 'mylib-svg-icon',
   templateUrl: './svg-icon.component.html',
   styleUrls: ['./svg-icon.component.scss']
 })

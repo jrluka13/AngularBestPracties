@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ICONS } from '../../../../../../shared/components/svg-icon/icons-list';
+import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 
 @Component({
   selector: 'roles-eligible',

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './admin-layout.component';
-import { RolesPageComponent } from './pages/roles/roles-page.component';
-import { UsersPageComponent } from './pages/users/users-page.component';
 
 const routes: Routes = [
   {
@@ -11,11 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: 'roles',
-        component: RolesPageComponent,
+        loadChildren: () => import('src/layouts/admin/pages/roles/roles-page.module').then(m => m.RolesPageModule)
       },
       {
         path: 'users',
-        component: UsersPageComponent,
+        loadChildren: () => import('src/layouts/admin/pages/users/users-page.module').then(m => m.UsersPageModule)
       },
     ],
   }

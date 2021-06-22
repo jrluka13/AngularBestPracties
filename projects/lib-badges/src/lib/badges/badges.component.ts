@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { Badge } from '../services/badges.service';
+import { Badge } from 'projects/lib-badges/src/lib/services/badges.service';
 
 @Component({
-  selector: 'lib-badges-badges',
+  selector: 'mylib-badges',
   templateUrl: './badges.component.html',
   styleUrls: ['./badges.component.scss']
 })
