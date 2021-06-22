@@ -11,6 +11,7 @@ import { LeaderBoardComponent } from './components/leader-board/leader-board.com
 import { LeaderBoardService } from './services/leader-board.service';
 import { BadgesComponent } from './components/badges/badges.component';
 import { BadgesService } from './services/badges.service';
+import { LibBadgesModule } from 'lib-badges';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { BadgesService } from './services/badges.service';
   ],
   exports: [ProfilePageComponent],
   imports: [
-    CommonModule, SharedModule
+    CommonModule, SharedModule, LibBadgesModule
   ],
   providers: [CardSkillsService, LeaderBoardService, BadgesService]
 })
