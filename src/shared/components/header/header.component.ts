@@ -6,18 +6,22 @@ import { LinksList } from 'src/shared/components/header/links-list';
 @Component({
   selector: 'shared-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   private _typeUser: string;
+
   private _title: string;
+
   private _logo = ICONS.ANGULAR;
+
   private _rightIcons = [
     ICONS.SEARCH,
     ICONS.CURSOR,
     ICONS.BELL,
     ICONS.LIST,
   ];
+
   private _linksUser = [
     {
       linkName: 'Overview',
@@ -30,7 +34,7 @@ export class HeaderComponent implements OnInit {
     {
       linkName: 'Profile',
       link: 'profile',
-    }
+    },
   ];
 
   private _linksAdmin = [
@@ -83,5 +87,4 @@ export class HeaderComponent implements OnInit {
   iconByName(index: number, name: ICONS): ICONS {
     return name;
   }
-
 }

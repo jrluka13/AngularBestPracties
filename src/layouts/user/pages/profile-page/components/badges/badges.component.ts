@@ -4,14 +4,11 @@ import { Badge } from 'src/layouts/user/pages/profile-page/services/badges.servi
 @Component({
   selector: 'app-badges',
   templateUrl: './badges.component.html',
-  styleUrls: ['./badges.component.scss']
+  styleUrls: ['./badges.component.scss'],
 })
 
 export class BadgesComponent {
   private _badge;
-
-  constructor() {
-  }
 
   @Input()
   set badge(value: Badge) {
@@ -21,6 +18,4 @@ export class BadgesComponent {
   get badge(): Badge {
     return this._badge;
   }
-
-
 }

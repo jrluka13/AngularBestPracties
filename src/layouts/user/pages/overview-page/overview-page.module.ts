@@ -8,9 +8,9 @@ import { RouterModule } from '@angular/router';
   exports: [OverviewPageComponent],
   imports: [
     CommonModule, RouterModule.forChild([{
-      path: '', component: OverviewPageComponent
-    }])
-  ]
+      path: '', component: OverviewPageComponent,
+    }]),
+  ],
 })
 
 export class OverviewPageModule {

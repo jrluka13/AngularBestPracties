@@ -17,10 +17,10 @@ import { RouterModule } from '@angular/router';
     MatSlideToggleModule,
     MatCheckboxModule,
     RouterModule.forChild([{
-      path: '', component: UsersPageComponent
-    }])
+      path: '', component: UsersPageComponent,
+    }]),
   ],
-  providers: [MockDataTableService]
+  providers: [MockDataTableService],
 })
 
 export class UsersPageModule {

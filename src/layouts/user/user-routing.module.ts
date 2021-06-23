@@ -11,29 +11,29 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'overview',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'settings',
-        loadChildren: () => import('src/layouts/user/pages/settings-page/settings-page.module').then(m => m.SettingsPageModule)
+        loadChildren: () => import('src/layouts/user/pages/settings-page/settings-page.module').then((m) => m.SettingsPageModule),
       },
       {
         path: 'profile',
-        component: ProfilePageComponent
+        component: ProfilePageComponent,
+        // eslint-disable-next-line max-len
         // loadChildren: () => import('src/layouts/user/pages/profile-page/profile-page.module').then(m => m.ProfilePageModule)
       },
       {
         path: 'overview',
-        loadChildren: () => import('src/layouts/user/pages/overview-page/overview-page.module').then(m => m.OverviewPageModule)
+        loadChildren: () => import('src/layouts/user/pages/overview-page/overview-page.module').then((m) => m.OverviewPageModule),
       },
     ],
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class UserRoutingModule {
 }
-

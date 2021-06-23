@@ -11,7 +11,7 @@ export class RegisterComponent {
       title: 'Sign Up',
       oppositeFormName: 'Sign In',
       oppositeFormLink: '/login',
-      submitButtonLink: '/user'
+      submitButtonLink: '/user',
     };
   }
 

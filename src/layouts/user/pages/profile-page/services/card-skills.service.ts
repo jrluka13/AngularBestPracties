@@ -8,9 +8,6 @@ export interface Card {
 @Injectable()
 
 export class CardSkillsService {
-  constructor() {
-  }
-
   private _cards: Card[] = [
     {
       title: 'IoT Development Platf orm Advan',
@@ -35,7 +32,7 @@ export class CardSkillsService {
     {
       title: 'IoT Development Platf orm Advan',
       date: new Date(),
-    }
+    },
   ];
 
   getCards(): Card[] {

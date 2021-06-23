@@ -5,11 +5,12 @@ import { Card } from 'src/layouts/user/pages/profile-page/services/card-skills.s
 @Component({
   selector: 'card-skills',
   templateUrl: './card-skills.component.html',
-  styleUrls: ['./card-skills.component.scss']
+  styleUrls: ['./card-skills.component.scss'],
 })
 
 export class CardSkillsComponent {
   public _star = ICONS.STAR;
+
   private _card: Card;
 
   @Input()
@@ -20,9 +21,4 @@ export class CardSkillsComponent {
   get card(): Card {
     return this._card;
   }
-
-  constructor() {
-  }
-
-
 }

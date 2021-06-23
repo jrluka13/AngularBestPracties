@@ -9,9 +9,6 @@ export interface Badge {
 @Injectable()
 
 export class BadgesService {
-  constructor() {
-  }
-
   private _badges: Badge[] = [
     {
       name: 'Bridge',

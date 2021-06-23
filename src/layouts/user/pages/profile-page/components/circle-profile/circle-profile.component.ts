@@ -4,14 +4,11 @@ import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 @Component({
   selector: 'circle-profile',
   templateUrl: './circle-profile.component.html',
-  styleUrls: ['./circle-profile.component.scss']
+  styleUrls: ['./circle-profile.component.scss'],
 })
 
-export class CircleProfileComponent{
+export class CircleProfileComponent {
   private _user = ICONS.USER;
-
-  constructor() {
-  }
 
   get userIcon(): ICONS {
     return this._user;

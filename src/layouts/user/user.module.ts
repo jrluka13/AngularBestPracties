@@ -7,7 +7,6 @@ import { SharedModule } from 'src/shared/shared.module';
 import { OverviewPageModule } from 'src/layouts/user/pages/overview-page/overview-page.module';
 import { ProfilePageModule } from 'src/layouts/user/pages/profile-page/profile-page.module';
 
-
 @NgModule({
   declarations: [UserLayoutComponent],
   imports: [
@@ -16,7 +15,7 @@ import { ProfilePageModule } from 'src/layouts/user/pages/profile-page/profile-p
     SettingsPageModule,
     OverviewPageModule,
     ProfilePageModule,
-    SharedModule
+    SharedModule,
   ],
 })
 export class UserModule {

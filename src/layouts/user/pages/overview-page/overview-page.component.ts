@@ -1,17 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'overview-page',
   templateUrl: './overview-page.component.html',
-  styleUrls: ['./overview-page.component.scss']
+  styleUrls: ['./overview-page.component.scss'],
 })
-export class OverviewPageComponent implements OnInit {
-
+export class OverviewPageComponent {
   constructor(private router: Router) {
-  }
-
-  ngOnInit(): void {
   }
 
   redirectToSetting(): void {

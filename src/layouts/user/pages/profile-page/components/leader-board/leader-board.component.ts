@@ -5,16 +5,15 @@ import { Board } from 'src/layouts/user/pages/profile-page/services/leader-board
 @Component({
   selector: 'leader-board',
   templateUrl: 'leader-board.component.html',
-  styleUrls: ['leader-board.component.scss']
+  styleUrls: ['leader-board.component.scss'],
 })
 
 export class LeaderBoardComponent {
   private _dataIcon = ICONS.BANK;
-  private _li: Board;
-  private _ind: number;
 
-  constructor() {
-  }
+  private _li: Board;
+
+  private _ind: number;
 
   @Input()
   set li(value: Board) {

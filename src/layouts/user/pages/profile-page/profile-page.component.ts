@@ -4,20 +4,22 @@ import { CardSkillsService } from 'src/layouts/user/pages/profile-page/services/
 import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services/leader-board.service';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
 
-
 @Component({
   selector: 'profile-page',
   templateUrl: './profile-page.component.html',
-  styleUrls: ['./profile-page.component.scss']
+  styleUrls: ['./profile-page.component.scss'],
 })
 
 export class ProfilePageComponent {
   private _title = 'Profile';
-  private _home = ICONS.HOME;
-  public cards = this.cardSkillsService.getCards();
-  public lists = this.leaderBoardService.getList();
-  public badges = this.badgesService.getBadges();
 
+  private _home = ICONS.HOME;
+
+  public cards = this.cardSkillsService.getCards();
+
+  public lists = this.leaderBoardService.getList();
+
+  public badges = this.badgesService.getBadges();
 
   constructor(private cardSkillsService: CardSkillsService,
               private leaderBoardService: LeaderBoardService,
@@ -30,5 +32,4 @@ export class ProfilePageComponent {
   get title(): string {
     return this._title;
   }
-
 }

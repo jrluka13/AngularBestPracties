@@ -9,11 +9,11 @@ import { SharedRoutingModule } from 'src/shared/shared-routing.module';
   declarations: [HeaderComponent, SvgIconComponent, NotFoundPageComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
   ],
   exports: [
-    HeaderComponent, SvgIconComponent, NotFoundPageComponent
-  ]
+    HeaderComponent, SvgIconComponent, NotFoundPageComponent,
+  ],
 })
 export class SharedModule {
 }

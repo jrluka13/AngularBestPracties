@@ -9,9 +9,9 @@ export interface PeriodicElement {
 @Injectable()
 export class MockDataTableService {
   private ELEMENT_DATA: PeriodicElement[] = [
-    {email: 'vlad@mail.ru', role: 'admin', active: true},
-    {email: 'lvfb@mail.ru', role: 'user', active: true},
-    {email: 'lvds23@mail.ru', role: 'user', active: false},
+    { email: 'vlad@mail.ru', role: 'admin', active: true },
+    { email: 'lvfb@mail.ru', role: 'user', active: true },
+    { email: 'lvds23@mail.ru', role: 'user', active: false },
   ];
 
   getData(): PeriodicElement[] {
