@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { BadgesService, Badge } from './services/badges.service';
 
-
 @Component({
   selector: 'mylib-lib-badges',
   template: `
     <mylib-badges *ngFor="let badge of badges" [badge]="badge"></mylib-badges>
   `,
-  styles: []
 })
 export class LibBadgesComponent {
   private _badges = this.badgesService.getBadges();
@@ -18,5 +16,4 @@ export class LibBadgesComponent {
   get badges(): Badge[] {
     return this._badges;
   }
-
 }
