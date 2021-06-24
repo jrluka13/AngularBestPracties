@@ -9,9 +9,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([{
-      path: '', component: RolesPageComponent
-    }])
-  ]
+      path: '', component: RolesPageComponent,
+    }]),
+  ],
 })
 
 export class RolesPageModule {

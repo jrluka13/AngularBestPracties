@@ -1,14 +1,14 @@
-@import "~projects/lib-badges/src/styles/theme";
+@import '../styles/theme';
 :host {
   width: 100%;
   margin-top: px2em(20);
-  @extend %d-flex-line-center !optional;
+  @extend %d-flex-line-center;
 
   .container {
-    @extend %d-flex-column-center !optional;
+    @extend %d-flex-column-center;
 
     .circle {
-      @extend %d-flex-center !optional;
+      @extend %d-flex-center;
       width: 80px;
       height: 80px;
       border-radius: 50%;

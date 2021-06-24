@@ -6,13 +6,13 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [SettingsPageComponent],
   exports: [
-    SettingsPageComponent
+    SettingsPageComponent,
   ],
   imports: [
     CommonModule, RouterModule.forChild([
-      {path: '', component: SettingsPageComponent}
-    ])
-  ]
+      { path: '', component: SettingsPageComponent },
+    ]),
+  ],
 })
 
 export class SettingsPageModule {

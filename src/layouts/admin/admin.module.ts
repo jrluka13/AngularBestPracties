@@ -13,7 +13,7 @@ import { SharedModule } from 'src/shared/shared.module';
     AdminRoutingModule,
     RolesPageModule,
     UsersPageModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
 })

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfilePageComponent } from './profile-page.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { CircleProfileComponent } from 'src/layouts/user/pages/profile-page/components/circle-profile/circle-profile.component';
 import { CircleCompletedComponent } from 'src/layouts/user/pages/profile-page/components/circle-completed/circle-completed.component';
@@ -12,6 +11,8 @@ import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services
 import { BadgesComponent } from 'src/layouts/user/pages/profile-page/components/badges/badges.component';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
 import { RouterModule } from '@angular/router';
+import { LibBadgesModule } from 'lib-badges';
+import { ProfilePageComponent } from './profile-page.component';
 
 @NgModule({
   declarations: [
@@ -21,16 +22,16 @@ import { RouterModule } from '@angular/router';
     CardSkillsComponent,
     RolesEligibleComponent,
     LeaderBoardComponent,
-    BadgesComponent
+    BadgesComponent,
   ],
   exports: [ProfilePageComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{path: '', component: ProfilePageComponent}]),
+    RouterModule.forChild([{ path: '', component: ProfilePageComponent }]),
     SharedModule,
-
+    LibBadgesModule,
   ],
-  providers: [CardSkillsService, LeaderBoardService, BadgesService]
+  providers: [CardSkillsService, LeaderBoardService, BadgesService],
 })
 
 export class ProfilePageModule {

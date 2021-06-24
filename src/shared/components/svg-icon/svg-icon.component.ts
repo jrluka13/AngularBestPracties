@@ -1,20 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 
 @Component({
   selector: 'svg-icon',
   templateUrl: './svg-icon.component.html',
-  styleUrls: ['./svg-icon.component.scss']
+  styleUrls: ['./svg-icon.component.scss'],
 })
-export class SvgIconComponent implements OnInit {
+export class SvgIconComponent {
   private _name: ICONS;
+
   private _width = '16';
+
   private _height = '16';
+
   private _fill = 'fill:#black';
-
-
-  constructor() {
-  }
 
   @Input()
   set name(value: ICONS) {
@@ -51,7 +50,4 @@ export class SvgIconComponent implements OnInit {
   get fill(): string {
     return this._fill;
   }
-  ngOnInit(): void {
-  }
-
 }

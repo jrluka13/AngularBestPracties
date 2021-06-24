@@ -13,17 +13,17 @@ export class LeaderBoardService {
     {
       text: '30 maximum with 3 dots sssssssssss adawdaw dasawdawdawddadw',
       iconName: ICONS.USER,
-      time: new Date()
+      time: new Date(),
     },
     {
       text: '30 maximum with 3 dots sssssssssss adawdaw dasawdawdawddadw',
       iconName: ICONS.USER,
-      time: new Date()
+      time: new Date(),
     },
     {
       text: '30 maximum with 3 dots sssssssssss adawdaw dasawdawdawddadw',
       iconName: ICONS.USER,
-      time: new Date()
+      time: new Date(),
     },
 
   ];
@@ -31,5 +31,4 @@ export class LeaderBoardService {
   getList(): Board[] {
     return this._list;
   }
-
 }

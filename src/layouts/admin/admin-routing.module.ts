@@ -9,20 +9,19 @@ const routes: Routes = [
     children: [
       {
         path: 'roles',
-        loadChildren: () => import('src/layouts/admin/pages/roles/roles-page.module').then(m => m.RolesPageModule)
+        loadChildren: () => import('src/layouts/admin/pages/roles/roles-page.module').then((m) => m.RolesPageModule),
       },
       {
         path: 'users',
-        loadChildren: () => import('src/layouts/admin/pages/users/users-page.module').then(m => m.UsersPageModule)
+        loadChildren: () => import('src/layouts/admin/pages/users/users-page.module').then((m) => m.UsersPageModule),
       },
     ],
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AdminRoutingModule {
 }
-

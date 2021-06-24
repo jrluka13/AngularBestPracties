@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'auth-form',
   templateUrl: './auth-form.component.html',
-  styleUrls: ['./auth-form.component.scss']
+  styleUrls: ['./auth-form.component.scss'],
 })
 export class AuthFormComponent implements OnInit {
   private _data: AuthFormData;
@@ -24,12 +24,13 @@ export class AuthFormComponent implements OnInit {
   }
 
   form: FormGroup;
+
   hide = true;
 
   ngOnInit(): void {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.email]]
+      password: ['', [Validators.required, Validators.email]],
     });
   }
 

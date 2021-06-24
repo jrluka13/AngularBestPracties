@@ -8,9 +8,9 @@ describe('SvgIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SvgIconComponent ]
+      declarations: [SvgIconComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

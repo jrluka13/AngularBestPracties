@@ -1,5 +1,5 @@
-@import "~projects/lib-badges/src/styles/theme";
+@import "../../styles/theme";
 
 svg {
-  @extend %d-flex-center !optional
+  @extend %d-flex-center;
 }
