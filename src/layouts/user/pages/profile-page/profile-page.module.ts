@@ -11,8 +11,8 @@ import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services
 import { BadgesComponent } from 'src/layouts/user/pages/profile-page/components/badges/badges.component';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
 import { RouterModule } from '@angular/router';
+import { LibBadgesModule } from 'lib-badges';
 import { ProfilePageComponent } from './profile-page.component';
-// import { LibBadgesModule } from 'lib-badges';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { ProfilePageComponent } from './profile-page.component';
     CommonModule,
     RouterModule.forChild([{ path: '', component: ProfilePageComponent }]),
     SharedModule,
-    // LibBadgesModule
+    LibBadgesModule,
   ],
   providers: [CardSkillsService, LeaderBoardService, BadgesService],
 })
