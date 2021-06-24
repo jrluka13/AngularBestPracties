@@ -174,7 +174,7 @@
       "projectType": "library",
       "root": "projects/lib-posts",
       "sourceRoot": "projects/lib-posts/src",
-      "prefix": "posts",
+      "prefix": "post",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

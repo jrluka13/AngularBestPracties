@@ -10,6 +10,9 @@
 # dependencies
 /node_modules
 
+# projects
+/projects
+
 # test file
 /tasks.txt
 

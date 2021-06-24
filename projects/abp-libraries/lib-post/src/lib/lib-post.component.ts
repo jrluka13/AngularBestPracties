@@ -10,11 +10,11 @@ interface Post {
 }
 
 @Component({
-  selector: 'posts-lib-posts',
-  templateUrl: './lib-posts.component.html',
-  styleUrls: ['./lib-posts.component.scss'],
+  selector: 'post-lib-post',
+  templateUrl: './lib-post.component.html',
+  styleUrls: ['./lib-post.component.scss'],
 })
-export class LibPostsComponent {
+export class LibPostComponent {
   private _posts: Post;
 
   @Input()

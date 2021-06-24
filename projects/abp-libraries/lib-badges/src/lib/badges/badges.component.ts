@@ -1,17 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Badge } from '../services/badges.service';
 
-
 @Component({
   selector: 'mylib-badges',
   templateUrl: './badges.component.html',
-  styleUrls: ['./badges.component.scss']
+  styleUrls: ['./badges.component.scss'],
 })
 
 export class BadgesComponent {
   private _badge;
-  constructor() {
-  }
 
   @Input()
   set badge(value: Badge) {
@@ -21,6 +18,4 @@ export class BadgesComponent {
   get badge(): Badge {
     return this._badge;
   }
-
-
 }
