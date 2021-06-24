@@ -3,7 +3,7 @@ import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { CardSkillsService } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
 import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services/leader-board.service';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
-import { DataUserService } from '../../services/data-user.service';
+import { DataUserService, Post } from '../../services/data-user.service';
 
 @Component({
   selector: 'profile-page',
@@ -13,6 +13,8 @@ import { DataUserService } from '../../services/data-user.service';
 
 export class ProfilePageComponent {
   private _title = 'Profile';
+
+  private _posts: Post[];
 
   private _home = ICONS.HOME;
 
@@ -26,7 +28,10 @@ export class ProfilePageComponent {
               private leaderBoardService: LeaderBoardService,
               private badgesService: BadgesService,
               private dataUserService: DataUserService) {
-    this.dataUserService.getData();
+    this.dataUserService.getData()
+      .subscribe((posts) => {
+        this._posts = posts;
+      });
   }
 
   get homeIcon(): ICONS {
@@ -35,5 +40,9 @@ export class ProfilePageComponent {
 
   get title(): string {
     return this._title;
+  }
+
+  get posts(): Post[] {
+    return this._posts;
   }
 }

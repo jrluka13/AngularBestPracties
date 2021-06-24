@@ -1,0 +1,31 @@
+@import 'functions';
+@import 'templates';
+
+
+//Auth layout
+$auth-layout-background: #eeeeee;
+$auth-form-background: #ffffff;
+
+//User layout
+$user-layout-background: #ffffff;
+
+//Header Colors
+$header-background-color: #ffffff;
+$user-header-background-color: #c6ff00;
+$admin-header-background-color: #2979ff;
+
+//Footer Colors
+$footer-background-color: #ffffff;
+
+$layout-background-color: #f7f5f9;
+$setting-background-color: #e0e0e0;
+
+//Fonts
+$base-regular-font: 'Arial';
+$base-link-color: #878787;
+
+//Gutters
+$lg-screen-gutter: px2em(56); // from 1920px
+$md-screen-gutter: px2em(56); // from 1280px to 1919px
+$sm-screen-gutter: px2em(56); // from 760px to 1219px
+$xs-screen-gutter: px2em(24); // from 0px to 759px

@@ -1,0 +1,36 @@
+@import 'styles/theme';
+
+.container {
+  @extend %d-grid;
+  width: 100%;
+  height: 10%;
+  background-color: #ffffff;
+  margin-top: px2em(10);
+  border-radius: px2em(5);
+  grid-template-rows: px2em(30) auto;
+
+  .title {
+    padding-top: px2em(5);
+    @extend %d-flex-line-center;
+
+    span {
+      text-transform: uppercase;
+      font-weight: lighter;
+    }
+
+  }
+
+  .text {
+    padding: 0 20px;
+    @extend %d-flex-line-center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    p {
+      line-height: px2em(35);
+    }
+
+  }
+
+}
+

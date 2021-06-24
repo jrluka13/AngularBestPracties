@@ -5,7 +5,7 @@
   height: 10%;
   background-color: #ffffff;
   margin-top: px2em(10);
-  border-radius: 5px;
+  border-radius: px2em(5);
 
   .container {
       @extend %d-grid;

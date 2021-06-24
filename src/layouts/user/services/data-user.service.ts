@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+export interface Post {
+  body: string;
+  id: number;
+  userId: number;
+  title: string;
+}
 
 @Injectable()
 export class DataUserService {
   constructor(private http: HttpClient) {
   }
 
-  getData(): void {
-    this.http.get('https://jsonplaceholder.typicode.com/posts?_limit=2')
-      .subscribe((response) => {
-        console.log(response);
-      });
+  getData(): Observable<Post[]> {
+    return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts?_limit=5');
   }
 
   deleteData(id: number): void {
@@ -20,7 +25,6 @@ export class DataUserService {
   postData(newPost: object): void {
     this.http.post('https://jsonplaceholder.typicode.com/posts', newPost)
       .subscribe((post) => {
-        console.log('post', post);
       });
   }
 
