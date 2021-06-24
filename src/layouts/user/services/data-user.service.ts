@@ -12,4 +12,8 @@ export class DataUserService {
         console.log(response);
       });
   }
+
+  deleteData(): void {
+
+  }
 }
