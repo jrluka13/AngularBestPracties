@@ -35,6 +35,11 @@
   justify-content: center;
 }
 
+%d-flex-line-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 //Heading
 %h3 {
   margin-left: px2em(50);

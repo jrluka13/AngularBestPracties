@@ -45,4 +45,8 @@ export class ProfilePageComponent {
   get posts(): Post[] {
     return this._posts;
   }
+
+  deletePost(id: number): void {
+    this._posts = this._posts.filter((post) => post.id !== id);
+  }
 }

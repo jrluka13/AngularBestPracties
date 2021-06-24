@@ -1,6 +1,7 @@
 <div class="container">
   <div class="title">
     <span>{{posts.title}}</span>
+    <span class="close" (click)="deletePost(posts)"></span>
   </div>
   <div class="text">
     <p>{{posts.body}}</p>

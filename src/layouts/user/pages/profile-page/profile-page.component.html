@@ -26,7 +26,7 @@
           </div>
           <div class="center-block_right">
             <span>Posts</span>
-            <posts-lib-posts *ngFor="let post of posts" [posts]="post"></posts-lib-posts>
+            <posts-lib-posts *ngFor="let post of posts" [posts]="post" (deleteHandler)="deletePost($event)"></posts-lib-posts>
           </div>
         </div>
       </div>

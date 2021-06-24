@@ -10,13 +10,21 @@
   grid-template-rows: px2em(30) auto;
 
   .title {
-    padding-top: px2em(5);
-    @extend %d-flex-line-center;
+    padding: px2em(5) px2em(10);
+    @extend %d-flex-line-between;
 
     span {
       text-transform: uppercase;
       font-weight: lighter;
     }
+
+    .close {
+      cursor: pointer;
+      &:after {
+        content: "\274c";
+      }
+    }
+
 
   }
 
@@ -25,6 +33,7 @@
     @extend %d-flex-line-center;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: capitalize;
 
     p {
       line-height: px2em(35);

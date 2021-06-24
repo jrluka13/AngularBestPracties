@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component, EventEmitter, Input, Output,
+} from '@angular/core';
 
 interface Post {
   body: string;
@@ -22,5 +24,11 @@ export class LibPostsComponent {
 
   get posts(): Post {
     return this._posts;
+  }
+
+  @Output() deleteHandler: EventEmitter<number> = new EventEmitter<number>();
+
+  deletePost(post: Post): void {
+    this.deleteHandler.emit(post.id);
   }
 }
