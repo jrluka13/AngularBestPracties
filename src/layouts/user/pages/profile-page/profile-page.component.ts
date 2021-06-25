@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { CardSkillsService } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
-import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services/leader-board.service';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
 import { DataUserService, Post } from '../../services/data-user.service';
+import { CrudPostsService } from './services/crud-posts.service';
 
 @Component({
   selector: 'profile-page',
@@ -18,16 +18,16 @@ export class ProfilePageComponent {
 
   private _home = ICONS.HOME;
 
-  public cards = this.cardSkillsService.getCards();
+  private _add = ICONS.ADD;
 
-  public lists = this.leaderBoardService.getList();
+  public cards = this.cardSkillsService.getCards();
 
   public badges = this.badgesService.getBadges();
 
   constructor(private cardSkillsService: CardSkillsService,
-              private leaderBoardService: LeaderBoardService,
               private badgesService: BadgesService,
-              private dataUserService: DataUserService) {
+              private dataUserService: DataUserService,
+              private crudPostsService: CrudPostsService) {
     this.dataUserService.getData()
       .subscribe((posts) => {
         this._posts = posts;
@@ -36,6 +36,10 @@ export class ProfilePageComponent {
 
   get homeIcon(): ICONS {
     return this._home;
+  }
+
+  get addIcon(): ICONS {
+    return this._add;
   }
 
   get title(): string {
@@ -47,6 +51,14 @@ export class ProfilePageComponent {
   }
 
   deletePost(id: number): void {
-    this._posts = this._posts.filter((post) => post.id !== id);
+    this._posts = this.crudPostsService.deletePost(id, this._posts);
+  }
+
+  editPost(id: number): void {
+    this.crudPostsService.editPost(id);
+  }
+
+  addPost(): void {
+    this.crudPostsService.addPost(this.posts);
   }
 }

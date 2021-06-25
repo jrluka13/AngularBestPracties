@@ -13,5 +13,6 @@ export enum ICONS {
   BICYCLE = 'bicycle',
   BOOK = 'book',
   STAR = 'star',
-  EGG = 'egg'
+  EGG = 'egg',
+  CLOSE = 'close',
 }

@@ -1,7 +1,10 @@
 <div class="container">
   <div class="title">
     <span>{{posts.title}}</span>
-    <span class="close" (click)="deletePost(posts)"></span>
+    <div class="icons">
+      <post-lib-icon (click)="editPost(posts)" class="icon" [name]="pencil"></post-lib-icon>
+      <post-lib-icon (click)="deletePost(posts)" class="icon" [name]="close"></post-lib-icon>
+    </div>
   </div>
   <div class="text">
     <p>{{posts.body}}</p>

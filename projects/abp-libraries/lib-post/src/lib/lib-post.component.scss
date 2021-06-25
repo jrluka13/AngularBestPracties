@@ -6,25 +6,27 @@
   height: 10%;
   background-color: #ffffff;
   margin-top: px2em(10);
+  padding: px2em(20) px2em(0) px2em(20) px2em(20);
   border-radius: px2em(5);
   grid-template-rows: px2em(30) auto;
+  cursor: pointer;
 
   .title {
-    padding: px2em(5) px2em(10);
     @extend %d-flex-line-between;
 
     span {
       text-transform: uppercase;
-      font-weight: lighter;
+      font-weight: 500;
     }
 
-    .close {
-      cursor: pointer;
-      &:after {
-        content: "\274c";
+    .icons {
+      @extend %d-flex-line-between;
+
+      .icon {
+        cursor: pointer;
+        margin-right: px2em(5);
       }
     }
-
 
   }
 
@@ -36,6 +38,7 @@
     text-transform: capitalize;
 
     p {
+      font-weight: lighter;
       line-height: px2em(35);
     }
 
