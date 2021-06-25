@@ -50,12 +50,12 @@ export class ProfilePageComponent {
     return this._posts;
   }
 
-  deletePost(id: number): void {
-    this._posts = this.crudPostsService.deletePost(id, this._posts);
+  deletePost(post: Post): void {
+    this.crudPostsService.deletePost(post);
   }
 
-  editPost(id: number): void {
-    this.crudPostsService.editPost(id);
+  editPost(post: Post): void {
+    this.crudPostsService.editPost(post);
   }
 
   addPost(): void {

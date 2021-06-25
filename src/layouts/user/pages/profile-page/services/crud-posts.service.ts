@@ -1,18 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Post } from '../../../services/data-user.service';
+import { MatDialog } from '@angular/material/dialog';
+import { Post } from 'src/layouts/user/services/data-user.service';
+import { MatDialogComponent } from 'src/shared/components/mat-dialog/mat-dialog.component';
 
 @Injectable()
 
 export class CrudPostsService {
-  editPost(id: number): void {
-    console.log('edit icon clicked', id);
+  constructor(private dialog: MatDialog) {
   }
 
-  deletePost(id: number, posts: Post[]): Post[] {
-    return posts.filter((post) => post.id !== id);
+  editPost(post: Post): void {
+    this.dialog.open(MatDialogComponent, { data: { post, type: 'edit' } });
+    console.log('Редакстирование поста');
+  }
+
+  deletePost(post: Post): void {
+    this.dialog.open(MatDialogComponent, { data: { post, type: 'delete' } });
+    console.log('Удаление поста');
   }
 
   addPost(posts: Post[]): void {
-    console.log('add icon clicked', posts);
+    this.dialog.open(MatDialogComponent, { data: { posts, type: 'add' } }).afterClosed().subscribe((result) => {
+      console.log(result);
+    });
+    console.log('Добавление поста');
   }
 }

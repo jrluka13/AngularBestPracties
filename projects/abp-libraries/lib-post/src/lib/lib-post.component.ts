@@ -45,15 +45,21 @@ export class LibPostComponent {
     return this._close;
   }
 
-  @Output() deleteHandler: EventEmitter<number> = new EventEmitter<number>();
+  @Output() deleteHandler: EventEmitter<Post> = new EventEmitter<Post>();
 
-  @Output() editHandler: EventEmitter<number> = new EventEmitter<number>();
+  @Output() editHandler: EventEmitter<Post> = new EventEmitter<Post>();
 
-  deletePost(post: Post): void {
-    this.deleteHandler.emit(post.id);
+  deletePost(post: Post, event: MouseEvent): void {
+    event.stopPropagation();
+    this.deleteHandler.emit(post);
   }
 
-  editPost(post: Post) {
-    this.editHandler.emit(post.id);
+  editPost(post: Post, event: MouseEvent): void {
+    event.stopPropagation();
+    this.editHandler.emit(post);
+  }
+
+  openCard(): void {
+    console.log('Создание нового поста');
   }
 }

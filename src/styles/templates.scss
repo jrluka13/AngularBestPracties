@@ -30,14 +30,19 @@
   flex-direction: column;
 }
 
-%d-flex-line-center{
+%d-flex-line-center {
   display: flex;
   justify-content: center;
 }
 
-%d-flex-line-start{
+%d-flex-line-start {
   display: flex;
   justify-content: start;
+}
+
+%d-flex-line-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 //Heading

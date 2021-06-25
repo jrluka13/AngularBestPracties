@@ -1,15 +1,16 @@
 @import 'styles/theme';
 
 .container {
+
   @extend %d-grid;
   width: 100%;
-  height: 10%;
+  height: 6%;
   background-color: #ffffff;
   margin-top: px2em(10);
-  padding: px2em(20) px2em(0) px2em(20) px2em(20);
+  padding: px2em(25) px2em(10) px2em(25) px2em(25);
   border-radius: px2em(5);
   grid-template-rows: px2em(30) auto;
-  cursor: pointer;
+
 
   .title {
     @extend %d-flex-line-between;
@@ -24,15 +25,14 @@
 
       .icon {
         cursor: pointer;
-        margin-right: px2em(5);
+        margin-right: px2em(10);
       }
     }
 
   }
 
   .text {
-    padding: 0 20px;
-    @extend %d-flex-line-center;
+    padding: px2em(0) px2em(10);
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: capitalize;

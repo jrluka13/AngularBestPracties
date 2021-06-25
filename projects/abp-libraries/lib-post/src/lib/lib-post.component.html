@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" (click)="openCard()">
   <div class="title">
     <span>{{posts.title}}</span>
     <div class="icons">
-      <post-lib-icon (click)="editPost(posts)" class="icon" [name]="pencil"></post-lib-icon>
-      <post-lib-icon (click)="deletePost(posts)" class="icon" [name]="close"></post-lib-icon>
+      <post-lib-icon (click)="editPost(posts, $event)" class="icon" [name]="pencil"></post-lib-icon>
+      <post-lib-icon (click)="deletePost(posts, $event)" class="icon" [name]="close"></post-lib-icon>
     </div>
   </div>
   <div class="text">
