@@ -8,24 +8,23 @@
 
   .header {
     @extend %d-flex-line-between;
+
     .close {
       cursor: pointer;
     }
   }
-  .main{
+
+  .main {
     height: 90%;
-    .input{
+
+    .input {
       width: 100%;
       height: 10%;
     }
-    textarea{
+
+    textarea {
       width: 100%;
       height: 90%;
     }
   }
-
-  .footer {
-
-  }
-
 }

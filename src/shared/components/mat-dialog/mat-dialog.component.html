@@ -1,11 +1,13 @@
-<div class="container" [ngStyle]="{
-width: data.type == 'delete' ? '300px' : '500px',
-height: data.type == 'delete' ? '80px' : '500px'
-
-}">
+<div
+  class="container"
+  [ngStyle]="{
+  width: data.type == 'delete' ? '350px' : '500px',
+  height: data.type == 'delete' ? '150px' : '500px'
+  }"
+>
   <div mat-dialog-title class="header">
     <h1 *ngIf="data.type == 'add'">Create post</h1>
-    <h1 *ngIf="data.type == 'delete'">Are you sure, you want to delete this post ?</h1>
+    <h1 *ngIf="data.type == 'delete'">Are you sure, you want to delete this post "{{data.post.title}}" ?</h1>
     <h1 *ngIf="data.type == 'edit'">Edit post</h1>
     <svg-icon class="close" [name]="close" [mat-dialog-close]="false"></svg-icon>
   </div>
@@ -34,4 +36,3 @@ height: data.type == 'delete' ? '80px' : '500px'
   <button *ngIf="data.type == 'delete'" mat-button [mat-dialog-close]="false" (click)="deletePost()">Delete</button>
   <button *ngIf="data.type == 'edit'" mat-button [mat-dialog-close]="false" (click)="editPost()">Edit</button>
 </mat-dialog-actions>
-

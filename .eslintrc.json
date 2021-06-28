@@ -21,6 +21,7 @@
         "object": true
       }
     ],
+    "global-require": "off",
     "class-methods-use-this": "off",
     "no-shadow": "off",
     "no-useless-constructor": "off",
