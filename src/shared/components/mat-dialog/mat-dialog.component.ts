@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Post } from '../../../layouts/user/services/data-user.service';
 import { ICONS } from '../svg-icon/icons-list';
 
 @Component({

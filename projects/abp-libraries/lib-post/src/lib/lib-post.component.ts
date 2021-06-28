@@ -24,6 +24,8 @@ export class LibPostComponent {
 
   private _close = ICONS.CLOSE;
 
+  public toggle = false;
+
   @Input()
   set posts(value: Post) {
     this._posts = value;
@@ -60,6 +62,7 @@ export class LibPostComponent {
   }
 
   openCard(): void {
-    console.log('Создание нового поста');
+    this.toggle = !this.toggle;
+    console.log(this.toggle);
   }
 }
