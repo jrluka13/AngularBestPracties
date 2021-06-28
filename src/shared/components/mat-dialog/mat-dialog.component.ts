@@ -20,6 +20,10 @@ export class MatDialogComponent implements OnInit {
   public textEdit;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data) {
+    if (data.type === 'edit') {
+      this.titleEdit = data.post.title;
+      this.textEdit = data.post.body;
+    }
   }
 
   ngOnInit(): void {
@@ -38,7 +42,6 @@ export class MatDialogComponent implements OnInit {
   }
 
   deletePost(): void {
-
   }
 
   editPost(): void {
