@@ -73,6 +73,7 @@ describe('LibPostsComponent', () => {
   });
 
   it('should change toggle in openCard function', () => {
+    expect(component.toggle).toBeFalse();
     component.openCard();
     expect(component.toggle).toBeTrue();
   });

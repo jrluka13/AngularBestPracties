@@ -10,8 +10,10 @@
 # dependencies
 /node_modules
 
+/coverage
+
 # projects
-/projects
+#/projects
 
 # test file
 /tasks.txt

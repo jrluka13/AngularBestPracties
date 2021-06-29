@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { CardSkillsService } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
+import { Subscription } from 'rxjs';
 import { DataUserService, Post } from '../../services/data-user.service';
 import { CrudPostsService } from './services/crud-posts.service';
 
@@ -11,10 +12,12 @@ import { CrudPostsService } from './services/crud-posts.service';
   styleUrls: ['./profile-page.component.scss'],
 })
 
-export class ProfilePageComponent {
+export class ProfilePageComponent implements OnDestroy {
   private _title = 'Profile';
 
   private _posts: Post[];
+
+  sub: Subscription;
 
   private _home = ICONS.HOME;
 
@@ -28,10 +31,14 @@ export class ProfilePageComponent {
               private badgesService: BadgesService,
               private dataUserService: DataUserService,
               private crudPostsService: CrudPostsService) {
-    this.dataUserService.getData()
+    this.sub = this.dataUserService.getData()
       .subscribe((posts) => {
         this._posts = posts;
       });
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 
   get homeIcon(): ICONS {
@@ -60,5 +67,9 @@ export class ProfilePageComponent {
 
   addPost(): void {
     this.crudPostsService.addPost(this.posts);
+  }
+
+  postByTitle(index, post): string {
+    return post.title;
   }
 }

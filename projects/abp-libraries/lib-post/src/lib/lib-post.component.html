@@ -2,16 +2,16 @@
   height: toggle ? 'fit-content' : '6%'
 }" >
   <div class="title">
-    <span>{{posts.title}}</span>
+    <span>{{post.title}}</span>
     <div class="icons">
-      <post-lib-icon (click)="editPost(posts, $event)" class="icon" [name]="pencil"></post-lib-icon>
-      <post-lib-icon (click)="deletePost(posts, $event)" class="icon" [name]="close"></post-lib-icon>
+      <post-lib-icon (click)="editPost(post, $event)" class="icon" [name]="pencil"></post-lib-icon>
+      <post-lib-icon (click)="deletePost(post, $event)" class="icon" [name]="close"></post-lib-icon>
     </div>
   </div>
   <div class="text" [ngStyle]="{
   overflow: toggle ? 'no-display' : 'hidden'
   }">
-    <p>{{posts.body}}</p>
+    <p>{{post.body}}</p>
   </div>
 </div>
 

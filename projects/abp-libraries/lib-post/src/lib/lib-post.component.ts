@@ -1,5 +1,5 @@
 import {
-  Component, EventEmitter, Input, Output,
+  ChangeDetectionStrategy, Component, EventEmitter, Input, Output,
 } from '@angular/core';
 import { ICONS } from './svg-icon/icons-list';
 
@@ -14,9 +14,10 @@ interface Post {
   selector: 'post-lib-post',
   templateUrl: './lib-post.component.html',
   styleUrls: ['./lib-post.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LibPostComponent {
-  private _posts: Post;
+  private _post: Post;
 
   private _pencil = ICONS.PENCIL;
 
@@ -27,12 +28,12 @@ export class LibPostComponent {
   public toggle = false;
 
   @Input()
-  set posts(value: Post) {
-    this._posts = value;
+  set post(value: Post) {
+    this._post = value;
   }
 
-  get posts(): Post {
-    return this._posts;
+  get post(): Post {
+    return this._post;
   }
 
   get pencil(): ICONS {
@@ -63,6 +64,5 @@ export class LibPostComponent {
 
   openCard(): void {
     this.toggle = !this.toggle;
-    console.log(this.toggle);
   }
 }

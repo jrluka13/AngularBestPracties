@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { API_ENDPOINTS } from 'src/layouts/user/enums/API_ENDPOINTS';
 
 export interface Post {
   body: string;
@@ -15,20 +16,18 @@ export class DataUserService {
   }
 
   getData(): Observable<Post[]> {
-    return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts?_limit=5');
+    return this.http.get<Post[]>(API_ENDPOINTS.getData);
   }
 
   deleteData(id: number): void {
-    this.http.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    this.http.delete(API_ENDPOINTS.deleteData + id);
   }
 
   postData(newPost: object): void {
-    this.http.post('https://jsonplaceholder.typicode.com/posts', newPost)
-      .subscribe((post) => {
-      });
+    this.http.post(API_ENDPOINTS.postData, newPost);
   }
 
   updateData(id: number, updatedPost: object): void {
-    this.http.put(`https://jsonplaceholder.typicode.com/posts/${id}`, updatedPost);
+    this.http.put(API_ENDPOINTS.updateData + id, updatedPost);
   }
 }
