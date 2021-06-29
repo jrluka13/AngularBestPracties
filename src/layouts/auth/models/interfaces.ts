@@ -4,3 +4,8 @@ export interface AuthFormData {
   oppositeFormLink: string;
   submitButtonLink: string;
 }
+
+export interface User {
+  email: string;
+  password: string;
+}

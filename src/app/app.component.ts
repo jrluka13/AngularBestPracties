@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Angular Best Practices';
+
+  constructor(private auth: AuthService) {
+  }
+
+  ngOnInit(): void {
+    const token = localStorage.getItem('accessToken');
+    if (token !== null) {
+      this.auth.setAccessToken(token);
+    }
+  }
 }

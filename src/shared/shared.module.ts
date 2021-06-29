@@ -10,6 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './classes/guards/auth-guard';
+import { AuthService } from './services/auth.service';
+import { TokenInterceptor } from './classes/token-interceptor';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,19 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
+    HttpClientModule,
   ],
   exports: [
     HeaderComponent, SvgIconComponent, NotFoundPageComponent,
+  ],
+  providers: [
+    AuthService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: TokenInterceptor,
+    },
   ],
 })
 export class SharedModule {

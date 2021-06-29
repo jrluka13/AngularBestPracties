@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { Router } from '@angular/router';
 import { LinksList } from 'src/shared/components/header/links-list';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'shared-header',
@@ -48,7 +49,7 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private auth: AuthService) {
   }
 
   get typeUser(): string {
@@ -86,5 +87,11 @@ export class HeaderComponent implements OnInit {
 
   iconByName(index: number, name: ICONS): ICONS {
     return name;
+  }
+
+  logout(): void {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+    this.auth.logout();
   }
 }
