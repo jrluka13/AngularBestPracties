@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component, Input, OnDestroy, OnInit,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -11,6 +12,7 @@ import { AuthService } from 'src/shared/services/auth.service';
   selector: 'auth-form',
   templateUrl: './auth-form.component.html',
   styleUrls: ['./auth-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthFormComponent implements OnInit, OnDestroy {
   private _data: AuthFormData;
@@ -52,7 +54,7 @@ export class AuthFormComponent implements OnInit, OnDestroy {
       () => {
         this.router.navigateByUrl(this.data.submitButtonLink);
       },
-      (error) => {
+      () => {
         this.form.enable();
       },
     );

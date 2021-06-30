@@ -27,7 +27,7 @@
           <div class="center-block_right">
             <div class="title-posts">
               <span>Posts</span>
-              <svg-icon class="add-icon" fill="fill:green" [name]="addIcon" (click)="addPost()"></svg-icon>
+              <svg-icon class="add-icon" [name]="addIcon" (click)="addPost()"></svg-icon>
             </div>
             <post-lib-post *ngFor="let post of posts; trackBy:postByTitle" [post]="post" (editHandler)="editPost($event)" (deleteHandler)="deletePost($event)"></post-lib-post>
           </div>

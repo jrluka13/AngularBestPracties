@@ -11,18 +11,15 @@ export class CrudPostsService {
 
   editPost(post: Post): void {
     this.dialog.open(MatDialogComponent, { data: { post, type: 'edit' } });
-    console.log('Редакстирование поста');
   }
 
   deletePost(post: Post): void {
     this.dialog.open(MatDialogComponent, { data: { post, type: 'delete' } });
-    console.log('Удаление поста');
   }
 
   addPost(posts: Post[]): void {
     this.dialog.open(MatDialogComponent, { data: { posts, type: 'add' } }).afterClosed().subscribe((result) => {
       console.log(result);
     });
-    console.log('Добавление поста');
   }
 }

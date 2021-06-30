@@ -1,13 +1,14 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ICONS } from '../svg-icon/icons-list';
+import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 
 @Component({
-  selector: 'app-mat-dialog',
+  selector: 'abp-mat-dialog',
   templateUrl: './mat-dialog.component.html',
   styleUrls: ['./mat-dialog.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MatDialogComponent implements OnInit {
+export class MatDialogComponent {
   private _close = ICONS.CLOSE;
 
   public title;
@@ -23,10 +24,6 @@ export class MatDialogComponent implements OnInit {
       this.titleEdit = data.post.title;
       this.textEdit = data.post.body;
     }
-  }
-
-  ngOnInit(): void {
-    console.log(this.data.posts);
   }
 
   get close(): ICONS {

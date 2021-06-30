@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy, Component, Input, OnInit,
+} from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { Router } from '@angular/router';
 import { LinksList } from 'src/shared/components/header/links-list';
@@ -8,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
   selector: 'shared-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
   private _typeUser: string;

@@ -1,24 +1,8 @@
 @import 'functions';
 @import 'templates';
 
-
-//Auth layout
-$auth-layout-background: #eeeeee;
-$auth-form-background: #ffffff;
-
-//User layout
-$user-layout-background: #ffffff;
-
-//Header Colors
-$header-background-color: #ffffff;
-$user-header-background-color: #c6ff00;
-$admin-header-background-color: #2979ff;
-
-//Footer Colors
-$footer-background-color: #ffffff;
-
-$layout-background-color: #f7f5f9;
-$setting-background-color: #e0e0e0;
+//Colors
+$base-background-color: #ffffff;
 
 //Fonts
 $base-regular-font: 'Arial';
