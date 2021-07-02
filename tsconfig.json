@@ -23,6 +23,10 @@
       "lib-posts": [
         "dist/lib-posts/lib-posts",
         "dist/lib-posts"
+      ],
+      "braga-lib": [
+        "dist/braga-lib/braga-lib",
+        "dist/braga-lib"
       ]
     }
   }

@@ -18,8 +18,6 @@ export class CrudPostsService {
   }
 
   addPost(posts: Post[]): void {
-    this.dialog.open(MatDialogComponent, { data: { posts, type: 'add' } }).afterClosed().subscribe((result) => {
-      console.log(result);
-    });
+    this.dialog.open(MatDialogComponent, { data: { posts, type: 'add' } });
   }
 }

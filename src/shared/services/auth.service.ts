@@ -3,11 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { User } from '../../layouts/auth/models/interfaces';
 
+export interface Tokens {
+  jwt: string;
+  refreshToken: string;
+}
+
 @Injectable()
 export class AuthService {
   private accessToken;
 
-  private refreshToken;
+  private refToken;
 
   constructor(private http: HttpClient) {
   }
@@ -17,18 +22,22 @@ export class AuthService {
       .pipe(
         tap(
           () => {
-            const accessToken = 'Bearer 123123123123123123';
-            const refreshToken = 'Bearer 54465465465456756';
-            localStorage.setItem('accessToken', accessToken);
-            localStorage.setItem('refreshToken', refreshToken);
-            this.setAccessToken(accessToken);
+            const tokens = { jwt: '123123123123123123', refreshToken: 'eyjwqqfwr234234gereg' };
+            this.setAccessToken(tokens.jwt);
+            this.setRefreshToken(tokens.refreshToken);
           },
         ),
       );
   }
 
-  setAccessToken(token: string): void {
-    this.accessToken = token;
+  setAccessToken(accessToken: string): void {
+    localStorage.setItem('accessToken', accessToken);
+    this.accessToken = accessToken;
+  }
+
+  setRefreshToken(refreshToken: string): void {
+    localStorage.setItem('refreshToken', refreshToken);
+    this.refToken = refreshToken;
   }
 
   getAccessToken(): string {
@@ -37,9 +46,23 @@ export class AuthService {
 
   logout(): void {
     this.setAccessToken(null);
+    this.setRefreshToken(null);
   }
 
   isAuthenticated(): boolean {
-    return this.accessToken;
+    return Boolean(this.accessToken);
+  }
+
+  getRefreshToken(): string {
+    return localStorage.getItem('refreshToken');
+  }
+
+  // tslint:disable-next-line:typedef
+  refreshToken() {
+    return this.http.post('https://jsonplaceholder.typicode.com/posts', {
+      refreshToken: this.getRefreshToken(),
+    }).pipe(tap((tokens: Tokens) => {
+      localStorage.setItem('accessToken', tokens.jwt);
+    }));
   }
 }
