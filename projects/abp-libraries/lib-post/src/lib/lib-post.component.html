@@ -1,0 +1,17 @@
+<div class="container" (click)="openCard()" [ngStyle]="{
+  height: toggle ? 'fit-content' : '6%'
+}" >
+  <div class="title">
+    <span>{{post.title}}</span>
+    <div class="icons">
+      <post-lib-icon (click)="editPost(post, $event)" class="icon" [name]="pencil"></post-lib-icon>
+      <post-lib-icon (click)="deletePost(post, $event)" class="icon" [name]="close"></post-lib-icon>
+    </div>
+  </div>
+  <div class="text" [ngStyle]="{
+  overflow: toggle ? 'no-display' : 'hidden'
+  }">
+    <p>{{post.body}}</p>
+  </div>
+</div>
+

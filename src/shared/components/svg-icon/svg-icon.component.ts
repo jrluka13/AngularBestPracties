@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 
 @Component({
   selector: 'svg-icon',
   templateUrl: './svg-icon.component.html',
   styleUrls: ['./svg-icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SvgIconComponent {
   private _name: ICONS;
@@ -12,8 +13,6 @@ export class SvgIconComponent {
   private _width = '16';
 
   private _height = '16';
-
-  private _fill = 'fill:#black';
 
   @Input()
   set name(value: ICONS) {
@@ -40,14 +39,5 @@ export class SvgIconComponent {
 
   get height(): string {
     return this._height;
-  }
-
-  @Input()
-  set fill(value: string) {
-    this._fill = value;
-  }
-
-  get fill(): string {
-    return this._fill;
   }
 }

@@ -6,13 +6,12 @@ import { CircleCompletedComponent } from 'src/layouts/user/pages/profile-page/co
 import { CardSkillsComponent } from 'src/layouts/user/pages/profile-page/components/card-skills/card-skills.component';
 import { CardSkillsService } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
 import { RolesEligibleComponent } from 'src/layouts/user/pages/profile-page/components/roles-eligible/roles-eligible.component';
-import { LeaderBoardComponent } from 'src/layouts/user/pages/profile-page/components/leader-board/leader-board.component';
-import { LeaderBoardService } from 'src/layouts/user/pages/profile-page/services/leader-board.service';
-import { BadgesComponent } from 'src/layouts/user/pages/profile-page/components/badges/badges.component';
 import { BadgesService } from 'src/layouts/user/pages/profile-page/services/badges.service';
 import { RouterModule } from '@angular/router';
 import { LibBadgesModule } from 'lib-badges';
 import { ProfilePageComponent } from './profile-page.component';
+import { LibPostModule } from '../../../../../projects/abp-libraries/lib-post/src/lib/lib-post.module';
+import { CrudPostsService } from './services/crud-posts.service';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,6 @@ import { ProfilePageComponent } from './profile-page.component';
     CircleCompletedComponent,
     CardSkillsComponent,
     RolesEligibleComponent,
-    LeaderBoardComponent,
-    BadgesComponent,
   ],
   exports: [ProfilePageComponent],
   imports: [
@@ -30,8 +27,9 @@ import { ProfilePageComponent } from './profile-page.component';
     RouterModule.forChild([{ path: '', component: ProfilePageComponent }]),
     SharedModule,
     LibBadgesModule,
+    LibPostModule,
   ],
-  providers: [CardSkillsService, LeaderBoardService, BadgesService],
+  providers: [CardSkillsService, CrudPostsService, BadgesService],
 })
 
 export class ProfilePageModule {

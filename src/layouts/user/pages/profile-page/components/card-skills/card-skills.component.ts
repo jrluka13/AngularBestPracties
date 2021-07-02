@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ICONS } from 'src/shared/components/svg-icon/icons-list';
 import { Card } from 'src/layouts/user/pages/profile-page/services/card-skills.service';
 
@@ -6,6 +6,7 @@ import { Card } from 'src/layouts/user/pages/profile-page/services/card-skills.s
   selector: 'card-skills',
   templateUrl: './card-skills.component.html',
   styleUrls: ['./card-skills.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class CardSkillsComponent {

@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthFormComponent } from 'src/layouts/auth/components/auth-form/auth-form.component';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
@@ -22,7 +23,7 @@ import { LoginComponent } from './pages/login/login.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    HttpClientModule,
   ],
-  providers: [],
 })
 export class AuthModule { }

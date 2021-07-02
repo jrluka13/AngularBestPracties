@@ -9,6 +9,7 @@ import { AppComponent } from 'src/app/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminModule } from 'src/layouts/admin/admin.module';
 import { SharedModule } from 'src/shared/shared.module';
+import { authClassesModule } from 'src/modules/auth-classes.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SharedModule } from 'src/shared/shared.module';
     AdminModule,
     BrowserAnimationsModule,
     SharedModule,
+    authClassesModule,
   ],
   bootstrap: [AppComponent],
 })

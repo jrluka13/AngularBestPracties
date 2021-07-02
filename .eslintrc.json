@@ -21,11 +21,13 @@
         "object": true
       }
     ],
+    "global-require": "off",
     "class-methods-use-this": "off",
     "no-shadow": "off",
     "no-useless-constructor": "off",
     "no-empty-function": "off",
     "no-underscore-dangle": "off",
+    "import/extensions": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "off",

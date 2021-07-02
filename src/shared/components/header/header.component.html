@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="left-block">
-    <svg-icon [name]="logoIcon" width="40" height="40"></svg-icon>
+    <svg-icon class="angular-icon" [name]="logoIcon" width="40" height="40"></svg-icon>
     <span class="title">{{title}}</span>
   </div>
   <nav class="nav">
@@ -17,5 +17,6 @@
   </nav>
   <div class="right-block">
     <svg-icon width="20" height="20" *ngFor="let icon of rightIcons; trackBy:iconByName" [name]=icon></svg-icon>
+    <button (click)="logout()">Logout</button>
   </div>
 </div>

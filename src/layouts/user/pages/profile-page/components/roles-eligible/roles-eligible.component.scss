@@ -5,7 +5,7 @@
   height: 10%;
   background-color: #ffffff;
   margin-top: px2em(10);
-  border-radius: 5px;
+  border-radius: px2em(5);
 
   .container {
       @extend %d-grid;
@@ -18,6 +18,10 @@
         height: 30px;
         border-radius: 50%;
         background-color: #fdecf5;
+
+        .roles{
+          fill: #F5B8DA;
+        }
       }
     }
     .right-block{

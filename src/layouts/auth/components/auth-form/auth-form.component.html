@@ -9,14 +9,15 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
         <i mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
            [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </i>
+        <mat-error *ngIf="form.get('password').invalid">{{getErrorMessage('password')}}</mat-error>
       </mat-form-field>
     </div>
-    <button mat-stroked-button color="primary">{{data.title}}</button>
+    <button [disabled]="form.invalid" mat-stroked-button color="primary">{{data.title}}</button>
   </form>
 
   <div class="register-link-block">

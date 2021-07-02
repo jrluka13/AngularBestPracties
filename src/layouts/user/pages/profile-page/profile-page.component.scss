@@ -66,6 +66,15 @@
 
           .center-block_right {
             padding: px2em(30);
+            .title-posts{
+              @extend %d-flex-start;
+              .add-icon{
+                margin-left: px2em(5);
+                cursor: pointer;
+                fill: green;
+              }
+
+            }
           }
 
         }

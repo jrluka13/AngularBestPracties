@@ -1,0 +1,15 @@
+@import 'functions';
+@import 'templates';
+
+//Colors
+$base-background-color: #ffffff;
+
+//Fonts
+$base-regular-font: 'Arial';
+$base-link-color: #878787;
+
+//Gutters
+$lg-screen-gutter: px2em(56); // from 1920px
+$md-screen-gutter: px2em(56); // from 1280px to 1919px
+$sm-screen-gutter: px2em(56); // from 760px to 1219px
+$xs-screen-gutter: px2em(24); // from 0px to 759px
